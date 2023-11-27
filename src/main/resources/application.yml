@@ -1,0 +1,25 @@
+
+server:
+  port: 8080
+
+dbDomain: "localhost:3306"
+
+spring:
+  datasource:
+    url: jdbc:mysql://${dbDomain}/library?useSSL=false&autoReconnect=true&useUnicode=true&characterEncoding=utf-8&serverTimezone=Asia/Seoul
+    username: library
+    password: "1234"
+
+  jpa:
+    open-in-view: true
+    hibernate:
+      ddl-auto: create
+    properties:
+      hibernate:
+        format_sql: true
+        show_sql: true
+#jwt:
+#  header: Authorization
+#  #HS512 ????? ??? ??? ??? 512bit, ? 64byte ??? secret key? ???? ??.
+#  secret: TlqkfghGhWkrmfdLwhsa11txkdTlqkfghkdqndnjSWIdr01wlrkX3dms21fusDDkkdknrirkxdms2dmsFusLNIdklsvn283bsldkn93094fuckyouFuCKYOU1818mOthe2rfUck2RRA66ssh0LetlqKfroToRlWhcRkxdmsToRldnDJDdn12ksdn335kll1nksdklnSGHJSfkndknKLFkndkTid99930zhemGKDNtmTid22cnldjqTlZUwnjskD0usQhd3600qKerhtTLbdj
+#  token-validity-in-seconds: 86400 # ttl (?)
